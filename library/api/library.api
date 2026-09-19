@@ -171,6 +171,52 @@ public abstract interface class eu/kanade/tachiyomi/source/SourceFactory {
 public abstract interface class eu/kanade/tachiyomi/source/UnmeteredSource {
 }
 
+public final class eu/kanade/tachiyomi/source/model/AudioCue {
+	public fun <init> (Ljava/lang/String;III)V
+	public synthetic fun <init> (Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun copy (Ljava/lang/String;III)Leu/kanade/tachiyomi/source/model/AudioCue;
+	public static synthetic fun copy$default (Leu/kanade/tachiyomi/source/model/AudioCue;Ljava/lang/String;IIIILjava/lang/Object;)Leu/kanade/tachiyomi/source/model/AudioCue;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFromPageIndex ()I
+	public final fun getPriority ()I
+	public final fun getToPageIndex ()I
+	public final fun getTrackId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class eu/kanade/tachiyomi/source/model/AudioTrack {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Leu/kanade/tachiyomi/source/model/AudioTrack;
+	public static synthetic fun copy$default (Leu/kanade/tachiyomi/source/model/AudioTrack;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Leu/kanade/tachiyomi/source/model/AudioTrack;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class eu/kanade/tachiyomi/source/model/ChapterAudio {
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Leu/kanade/tachiyomi/source/model/ChapterAudio;
+	public static synthetic fun copy$default (Leu/kanade/tachiyomi/source/model/ChapterAudio;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Leu/kanade/tachiyomi/source/model/ChapterAudio;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCues ()Ljava/util/List;
+	public final fun getTracks ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public abstract class eu/kanade/tachiyomi/source/model/Filter {
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Object;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun getName ()Ljava/lang/String;
@@ -309,10 +355,12 @@ public final class eu/kanade/tachiyomi/source/model/MangasPage {
 public final class eu/kanade/tachiyomi/source/model/Page {
 	public fun <init> (ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
 	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getChapterAudio ()Leu/kanade/tachiyomi/source/model/ChapterAudio;
 	public final fun getImageUrl ()Ljava/lang/String;
 	public final fun getIndex ()I
 	public final fun getUri ()Landroid/net/Uri;
 	public final fun getUrl ()Ljava/lang/String;
+	public final fun setChapterAudio (Leu/kanade/tachiyomi/source/model/ChapterAudio;)V
 	public final fun setImageUrl (Ljava/lang/String;)V
 	public final fun setUri (Landroid/net/Uri;)V
 }

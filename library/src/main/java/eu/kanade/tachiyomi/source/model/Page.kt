@@ -8,4 +8,6 @@ class Page(
     val url: String = "",
     var imageUrl: String? = null,
     var uri: Uri? = null,
-)
+) {
+    var chapterAudio: ChapterAudio? = null
+}
