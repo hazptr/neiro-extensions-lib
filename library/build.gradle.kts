@@ -47,12 +47,12 @@ tapmoc {
 }
 
 mavenPublishing {
-    coordinates("com.github.keiyoushi", "extensions-lib", "1.6")
+    coordinates("com.github.hazptr", "neiro-extensions-lib", "1.6.1")
 
     pom {
-        name.set("extensions-lib")
-        description.set("Stubs used for extensions in Tachiyomi and Mihon 0.x.")
-        url.set("https://github.com/keiyoushi/extensions-lib")
+        name.set("neiro-extensions-lib")
+        description.set("Extension stubs for Neiro: keiyoushi extensions-lib plus source-provided chapter audio.")
+        url.set("https://github.com/hazptr/neiro-extensions-lib")
 
         licenses {
             license {
@@ -63,13 +63,13 @@ mavenPublishing {
         }
 
         organization {
-            name.set("Keiyoushi")
-            url.set("https://github.com/keiyoushi")
+            name.set("hazptr")
+            url.set("https://github.com/hazptr")
         }
 
         scm {
-            connection.set("scm:git:git://github.com/keiyoushi/extensions-lib.git")
-            url.set("https://github.com/keiyoushi/extensions-lib")
+            connection.set("scm:git:git://github.com/hazptr/neiro-extensions-lib.git")
+            url.set("https://github.com/hazptr/neiro-extensions-lib")
         }
     }
 }

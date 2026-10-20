@@ -1,10 +1,17 @@
-# 📚 TachiyomiX
+# neiro-extensions-lib
 
-Tachiyomi-based extensions library used in [Mihon](https://github.com/mihonapp/mihon).
+Extension stubs for [Neiro](https://github.com/hazptr/neiro), a Mihon fork that plays background
+music provided by a source. It is [keiyoushi/extensions-lib](https://github.com/keiyoushi/extensions-lib)
+(itself based on [mihonapp/tachiyomix](https://github.com/mihonapp/tachiyomix)) plus one additive API:
+`ChapterAudio`, attached to a chapter's page list through `Page.chapterAudio`.
 
-## 📦 Usage
+Extensions built against it still run on apps without the API, as long as every reference to the
+audio types sits behind a `runCatching`: the `LinkageError` is absorbed and the chapter reads with no
+music.
 
-Add `jitpack.io` repository to your root `build.gradle.kts` file:
+## Usage
+
+Add the `jitpack.io` repository to your root `settings.gradle.kts`:
 ```kotlin
 dependencyResolutionManagement {
     repositories {
@@ -17,12 +24,11 @@ Then add the dependency:
 
 ```kotlin
 dependencies {
-    compileOnly("com.github.mihonapp:tachiyomix:1.6")
+    compileOnly("com.github.hazptr:neiro-extensions-lib:1.6.1")
 }
 ```
-> [!NOTE]
->
-> `compileOnly` is used because `tachiyomix` provides stub interfaces only. The actual implementations are included in the host app.
+
+`compileOnly` because this library provides stubs only; the implementations live in the host app.
 
 ## 🔧 App Dependency Requirements
 
@@ -39,4 +45,4 @@ Host apps using `tachiyomix` must include the following dependencies (or newer c
 
 ## 📄 License
 
-TachiyomiX is distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+neiro-extensions-lib is distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).

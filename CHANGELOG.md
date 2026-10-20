@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.1]
+
+### Added
+- `ChapterAudio`, `AudioTrack` and `AudioCue`; a chapter-level audio timeline over page ranges.
+- `Page.chapterAudio`; carries the chapter's audio on any one page of the list.
+
+## [1.6]
+
 ### Added
 - `Source.getPopularManga`; Suspend alternative to `CatalogueSource.fetchPopularManga`.
 - `Source.getLatestUpdates`; Suspend alternative to `CatalogueSource.fetchLatestUpdates`.
